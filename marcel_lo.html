@@ -1,0 +1,41 @@
+let palavra;
+
+
+function setup() {
+  createCanvas(400, 400);
+    
+  palavra = palavraAleatoria();
+
+}
+
+function palavraAleatoria() {
+  let palavras = ["Ford Ka Sedan 2020 <3","Duster Rebaixada 2024 :O","Opala Rosinha"];
+  return palavra = random(palavras);
+}
+
+function inicializaCores() {
+  
+   background("rgb(255,144,164)");
+  fill("white");
+  textSize(32);
+  textAlign(CENTER, CENTER);
+}
+
+function palavraParcial(minimo, maximo) {
+  let quantidade = map(mouseX, minimo, maximo,0 , palavra.length);
+  let parcial = palavra.substring(0, quantidade);
+  return parcial;
+}
+
+function draw() {
+  inicializaCores();
+  
+  let texto = palavraParcial(0, width);
+  text(texto,200,200);
+}
+
+
+function avaliacaoDeFilme(qualidade, sinopse, nomeDoFilme){
+  
+  
+}
